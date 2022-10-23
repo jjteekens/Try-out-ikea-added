@@ -346,7 +346,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 12800000, guid: 2ee0fcc3314c9e942bb65f28cc28ce0c, type: 3}
+    m_Font: {fileID: 12800000, guid: c7f7ca6e5afe0854295e5aa9dcaa587a, type: 3}
     m_FontSize: 75
     m_FontStyle: 0
     m_BestFit: 0
@@ -358,7 +358,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: RETURN OF IKEAMAN
+  m_Text: REVENGE OF IKEAMAN
 --- !u!222 &893080721
 CanvasRenderer:
   m_ObjectHideFlags: 0
