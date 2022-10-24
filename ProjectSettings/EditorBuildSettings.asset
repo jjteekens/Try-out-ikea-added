@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level 2.unity
     guid: 34fbef317a33912499ca289685d3b033
   - enabled: 1
+    path: Assets/Scenes/IKEA.unity
+    guid: 4247f8d483283cc4183e3a21d05f26d0
+  - enabled: 1
     path: Assets/Scenes/Level 3.unity
     guid: bea337022a8ea164e95f768a9b13f3bb
   - enabled: 1

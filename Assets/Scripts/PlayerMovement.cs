@@ -8,6 +8,13 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D coll;
     private SpriteRenderer sprite;
     private Animator anim;
+    float crouchOffset = -0.75f;
+
+    public Sprite Standing;
+    public Sprite Crouching;
+
+    public Vector2 StandingSize;
+    public Vector2 CrouchingSize;
 
     [SerializeField] private LayerMask jumpableGround;
 
@@ -27,6 +34,9 @@ public class PlayerMovement : MonoBehaviour
         coll = GetComponent<BoxCollider2D>();
         sprite = GetComponent<SpriteRenderer>();
         anim = GetComponent<Animator>();
+
+        sprite.sprite = Standing;
+        StandingSize = coll.size;
     }
 
     // Update is called once per frame
@@ -36,6 +46,19 @@ public class PlayerMovement : MonoBehaviour
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 
         UpdateAnimationState();
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            sprite.sprite = Crouching;
+            coll.size = new Vector2(coll.size.x, 0.9f);
+            coll.offset = new Vector2(0, crouchOffset);
+        }
+        if (Input.GetKeyUp(KeyCode.S))
+        {
+            sprite.sprite = Standing;
+            coll.size = new Vector2(coll.size.x, 1.8f);
+            coll.offset = new Vector2(0, -0.285375f);
+        }
     }
     private void UpdateAnimationState()
     {
